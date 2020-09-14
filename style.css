@@ -25,7 +25,7 @@ body {
   box-sizing: border-box;
   box-shadow: 5px 0 10px hsla(240, 40%, 10%, .6);
   position: relative;
-  /* transform: translateX(-100%); */
+  transform: translateX(-100%);
   transition: .5s;
 }
 
@@ -99,6 +99,10 @@ body {
   position: relative;
 }
 
+.nav li {
+  position: relative;
+}
+
 .nav li + li a::before {
   content: '';
   position: absolute;
@@ -108,13 +112,31 @@ body {
   border-top: 1px solid rgba(255, 255, 255, .4);
 }
 
-.nav a .fa {
+.nav li .fa {
   margin-right: -1.1em;
   transform: scale(0);
   transition: .5s;
 }
 
-.nav a:hover .fa {
+.nav li:hover .fa {
   margin-right: 0;
   transform: scale(1);
+}
+
+.nav li:hover > a {
+  background: rgba(0, 0, 0, .5);
+}
+
+.nav ul {
+  display: none;
+  position: absolute;
+  top: 10px;
+  left: 100%;
+  width: 300px;
+  background: rgba(255, 255, 255, .2);
+  box-shadow: 5px 5px 10px hsla(240, 40%, 10%, .6);
+}
+
+.nav li:hover > ul {
+  display: block;
 }
