@@ -25,7 +25,7 @@ body {
   box-sizing: border-box;
   box-shadow: 5px 0 10px hsla(240, 40%, 10%, .6);
   position: relative;
-  transform: translateX(-100%);
+  /* transform: translateX(-100%); */
   transition: .5s;
 }
 
@@ -91,7 +91,7 @@ body {
   color: #ffffff;
 }
 
-nav a {
+.nav a {
   display: block;
   padding: 10px;
   color: #ffffff;
@@ -99,7 +99,7 @@ nav a {
   position: relative;
 }
 
-nav a + a::before {
+.nav li + li a::before {
   content: '';
   position: absolute;
   left: 10px;
@@ -108,13 +108,13 @@ nav a + a::before {
   border-top: 1px solid rgba(255, 255, 255, .4);
 }
 
-nav a .fa {
+.nav a .fa {
   margin-right: -1.1em;
   transform: scale(0);
   transition: .5s;
 }
 
-nav a:hover .fa {
+.nav a:hover .fa {
   margin-right: 0;
   transform: scale(1);
 }
